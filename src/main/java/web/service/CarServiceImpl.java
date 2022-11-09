@@ -1,7 +1,6 @@
 package web.service;
 
 import org.springframework.stereotype.Component;
-import web.dao.CarDaoImpl;
 import web.dao.CarDao;
 import web.model.Car;
 
@@ -13,8 +12,8 @@ public class CarServiceImpl implements CarService {
 
     private final CarDao carDao;
 
-    public CarServiceImpl(CarDaoImpl carDaoImpl) {
-        this.carDao = carDaoImpl;
+    public CarServiceImpl(CarDao carDao) {
+        this.carDao = carDao;
     }
 
     @Override
